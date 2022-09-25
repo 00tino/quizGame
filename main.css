@@ -11,7 +11,7 @@ body{
     background: #007bff;
 }
 
-::section {
+::selection{
     color: #fff;
     background: #007bff;
 }
@@ -19,18 +19,18 @@ body{
 .start_btn,
 .info_box,
 .quiz_box,
-.results_box{
+.result_box{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
-                0 6px 20px rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .info_box.activeInfo,
-.info_box.activeQuiz,
-.results_box.activeResult{
+.quiz_box.activeQuiz,
+.result_box.activeResult{
     opacity: 1;
     z-index: 5;
     pointer-events: auto;
@@ -40,7 +40,7 @@ body{
 .start_btn button{
     font-size: 25px;
     font-weight: 500;
-    color:#007bff;
+    color: #007bff;
     padding: 15px 30px;
     outline: none;
     border: none;
@@ -59,10 +59,10 @@ body{
     transition: all 0.3s ease;
 }
 
-.info_box .info-list{
+.info_box .info-title{
     height: 60px;
     width: 100%;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid lightgrey;
     display: flex;
     align-items: center;
     padding: 0 30px;
@@ -84,13 +84,13 @@ body{
     font-weight: 600;
     color: #007bff;
 }
-.info_box .button{
+.info_box .buttons{
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding: 0 30px;
-    border-top: 1px solid lightgray;
+    border-top: 1px solid lightgrey;
 }
 
 .info_box .buttons button{
@@ -127,7 +127,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0,0.1);
+    box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.1);
 }
 
 .quiz_box header .title{
@@ -148,13 +148,13 @@ body{
     width: 145px;
 }
 
-.quiz_box header .timer ,time_left_txt{
+.quiz_box header .timer .time_left_txt{
     font-weight: 400;
     font-size: 17px;
     user-select: none;
 }
 
-.quiz_box header ,timer .timer_sec{
+.quiz_box header .timer .timer_sec{
     font-size: 18px;
     font-weight: 500;
     height: 30px;
@@ -188,7 +188,7 @@ section .que_text{
 
 section .option_list{
     padding: 20px 0px;
-    display: block;
+    display: block;   
 }
 
 section .option_list .option{
@@ -198,7 +198,7 @@ section .option_list .option{
     padding: 8px 15px;
     font-size: 17px;
     margin-bottom: 15px;
-    cursor : pointer;
+    cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
@@ -260,7 +260,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-top: 1px solid lightgray;
+    border-top: 1px solid lightgrey;
 }
 
 footer .total_que span{
@@ -306,7 +306,7 @@ footer button.show{
     transform: scale(1);
 }
 
-.results_box{
+.result_box{
     background: #fff;
     border-radius: 5px;
     display: flex;
@@ -321,35 +321,35 @@ footer button.show{
     transition: all 0.3s ease;
 }
 
-.results_box .icon{
+.result_box .icon{
     font-size: 100px;
     color: #007bff;
     margin-bottom: 10px;
 }
 
-.results_box .complete_text{
+.result_box .complete_text{
     font-size: 20px;
     font-weight: 500;
 }
 
-.results_box .score_text span{
+.result_box .score_text span{
     display: flex;
     margin: 10px 0;
     font-size: 18px;
     font-weight: 500;
 }
 
-results_box .score_text span p{
-    padding: 0 40px;
+.result_box .score_text span p{
+    padding: 0 4px;
     font-weight: 600;
 }
 
-.results_box .buttons{
+.result_box .buttons{
     display: flex;
     margin: 20px 0;
 }
 
-.results_box .buttons button{
+.result_box .buttons button{
     margin: 0 10px;
     height: 45px;
     padding: 0 20px;
